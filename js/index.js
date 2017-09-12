@@ -3,6 +3,9 @@
 function Project (name, location) {
   this.name = name;
   this.location = location;
+  this.append = function append() {
+    //stuff happens here
+  };
 }
 
 new Project ('Salmon Cookies', 'https://nathancmoore.github.io/cookie-stand/');

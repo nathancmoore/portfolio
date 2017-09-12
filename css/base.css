@@ -2,6 +2,9 @@
   width: 12vw;
 }
 
+nav {
+  display: none;
+}
 
 
 /* Tablet */
@@ -15,5 +18,8 @@
 @media all and (min-width: 800px) {
   .social {
     width: 4vw;
+  }
+  nav {
+    display: block;
   }
 }
