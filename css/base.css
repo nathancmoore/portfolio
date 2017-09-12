@@ -1,0 +1,19 @@
+.social {
+  width: 12vw;
+}
+
+
+
+/* Tablet */
+@media all and (min-width: 600px) {
+  .social {
+    width: 8vw;
+  }
+}
+
+/* Computer */
+@media all and (min-width: 800px) {
+  .social {
+    width: 4vw;
+  }
+}
