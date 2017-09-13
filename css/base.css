@@ -1,25 +1,27 @@
-.social {
+.social, #hamburger {
   width: 12vw;
 }
 
-nav {
+.social {
   display: none;
 }
 
-
 /* Tablet */
 @media all and (min-width: 600px) {
-  .social {
+  .social, #hamburger {
     width: 8vw;
+  }
+  .social {
+    display: none;
   }
 }
 
 /* Computer */
 @media all and (min-width: 800px) {
-  .social {
+  .social, #hamburger {
     width: 4vw;
   }
-  nav {
-    display: block;
+  #hamburger {
+    display: none;
   }
 }
