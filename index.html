@@ -8,12 +8,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
     <script id="handlebars" type="text/x-handlebars-template">
-      <!-- <div class="template">
+      <div>
         <hr>
-        <p>The project's name</p>
-        <p><a href="#">A link to the project</a></p>
+        <p id="projectName">{{ name }}</p>
+        <p><a id="projectLink" href="{{ location }}">A link to the project</a></p>
         <hr>
-      </div> -->
+      </div>
     </script>
   </head>
   <body>
@@ -24,12 +24,10 @@
       <a href="https://www.linkedin.com/"><img class="social" src="img/linkedin.png" alt="LinkedIn"></a>
     </nav>
       <img src="http://www.placecage.com/gif/200/300" alt="This will be a picture of me later">
-      <div class="template">
-        <hr>
-        <p>The project's name</p>
-        <p><a href="#">A link to the project</a></p>
-        <hr>
+      <div id="listOfProjects">
+
       </div>
   </body>
+  <script type="text/javascript" src="js/projects.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 </html>

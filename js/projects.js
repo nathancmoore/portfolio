@@ -1,0 +1,20 @@
+'use strict'
+
+var allProjects = [
+  {
+    projName: 'Salmon Cookies',
+    projLink: 'https://nathancmoore.github.io/cookie-stand/'
+  },
+  {
+    projName: 'BusMall',
+    projLink: 'https://nathancmoore.github.io/bus-mall/'
+  },
+  {
+    projName: 'Minesweeper',
+    projLink: 'https://nathancmoore.github.io/minesweeper/'
+  },
+  {
+    projName: 'Scramble',
+    projLink: 'https://nathancmoore.github.io/Scramble/'
+  }
+];
