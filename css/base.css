@@ -10,16 +10,6 @@
   display: none;
 }
 
-/* Tablet */
-@media all and (min-width: 600px) {
-  .social, #hamburger {
-    width: 8vw;
-  }
-  .social {
-    display: none;
-  }
-}
-
 /* Computer */
 @media all and (min-width: 800px) {
   .social, #hamburger {
