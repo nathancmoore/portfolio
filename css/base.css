@@ -1,3 +1,7 @@
+* {
+  background-color: #a9a389;
+}
+
 .social, #hamburger {
   width: 12vw;
 }
@@ -19,3 +23,13 @@
     display: none;
   }
 }
+
+/*
+This is my color pallette
+#121710
+#303c16
+#616243
+#a9a389
+#a7afa2
+
+*/
