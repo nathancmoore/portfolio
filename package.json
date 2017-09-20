@@ -1,0 +1,23 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "this is the package",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathancmoore/portfolio.git"
+  },
+  "author": "nathan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nathancmoore/portfolio/issues"
+  },
+  "homepage": "https://github.com/nathancmoore/portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4"
+  }
+}
