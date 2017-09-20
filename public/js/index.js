@@ -1,5 +1,7 @@
 'use strict';
 
+var projects = [];
+
 function hamburgerClick() {
   $('#nav img').fadeIn();
   $('#hamburger').hide();
@@ -27,7 +29,9 @@ Project.prototype.toHtml = function() {
   $('#listOfProjects').append(htmlToAppend);
 };
 
-allProjects.forEach(function(oneProject){
-  var proj = new Project(oneProject);
-  proj.toHtml();
+$.get('projects.json', function(stuff){
+  stuff.forEach(function(oneProject){
+    let proj = new Project(oneProject)
+    proj.toHtml()
+  })
 });
