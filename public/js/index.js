@@ -31,9 +31,7 @@ Project.prototype.toHtml = function() {
 
 $.get('projects.json', function(stuff){
   stuff.forEach(function(oneProject){
-    projects.push(new Project(oneProject));
-  })
-  projects.forEach(function(post){
-    post.toHtml();
+    let proj = new Project(oneProject)
+    proj.toHtml()
   })
 });
