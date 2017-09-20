@@ -1,11 +1,18 @@
 'use strict';
 
-function hamburgerClick () {
+function hamburgerClick() {
   $('#nav img').fadeIn();
   $('#hamburger').hide();
 }
 
-$('#hamburger').on('click', hamburgerClick)
+function aboutClick() {
+  $('#listOfProjects').hide();
+  $('#aboutMeContent').fadeIn();
+}
+
+$('#hamburger').on('click', hamburgerClick);
+
+$('#aboutMeButton').on('click', aboutClick);
 
 var rawHtml = $('#handlebars').html();
 var templateFunction  = Handlebars.compile(rawHtml);
