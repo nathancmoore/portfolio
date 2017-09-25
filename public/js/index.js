@@ -3,13 +3,6 @@
 
 (function () {
 
-var projects = [];
-
-function hamburgerClick() {
-  $('#nav img').fadeIn();
-  $('#hamburger').hide();
-}
-
   function hamburgerClick() {
     $('#nav img').fadeIn();
     $('#hamburger').hide();
@@ -25,7 +18,7 @@ function hamburgerClick() {
   $('#aboutMeButton').on('click', aboutClick);
 
   var rawHtml = $('#handlebars').html();
-  var templateFunction  = Handlebars.compile(rawHtml);
+  var templateFunction = Handlebars.compile(rawHtml);
 
   function Project (obj) {
     this.name = obj.projName;
@@ -36,15 +29,12 @@ function hamburgerClick() {
     var htmlToAppend = templateFunction(this);
     $('#listOfProjects').append(htmlToAppend);
   };
-  
+
   $.get('projects.json', function(stuff){
-  stuff.map(function(oneProject){
-    let proj = new Project(oneProject);
-    return proj.toHtml();
-  })
+    stuff.map(function(oneProject){
+      let proj = new Project(oneProject);
+      return proj.toHtml();
+    })
   });
   //I don't see a worthwhile use of the .reduce() here. My output is what I want.
 })();
-
-
-
