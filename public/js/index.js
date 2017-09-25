@@ -1,6 +1,14 @@
 'use strict';
 
+
 (function () {
+
+var projects = [];
+
+function hamburgerClick() {
+  $('#nav img').fadeIn();
+  $('#hamburger').hide();
+}
 
   function hamburgerClick() {
     $('#nav img').fadeIn();
@@ -28,10 +36,15 @@
     var htmlToAppend = templateFunction(this);
     $('#listOfProjects').append(htmlToAppend);
   };
-
-  allProjects.map(function(oneProject){
+  
+  $.get('projects.json', function(stuff){
+  stuff.map(function(oneProject){
     let proj = new Project(oneProject);
     return proj.toHtml();
+  })
   });
   //I don't see a worthwhile use of the .reduce() here. My output is what I want.
 })();
+
+
+
