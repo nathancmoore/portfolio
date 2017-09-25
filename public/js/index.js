@@ -30,7 +30,7 @@
   };
 
   allProjects.map(function(oneProject){
-    var proj = new Project(oneProject);
+    let proj = new Project(oneProject);
     return proj.toHtml();
   });
   //I don't see a worthwhile use of the .reduce() here. My output is what I want.
