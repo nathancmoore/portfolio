@@ -1,33 +1,37 @@
 'use strict';
 
-function hamburgerClick() {
-  $('#nav img').fadeIn();
-  $('#hamburger').hide();
-}
+(function () {
 
-function aboutClick() {
-  $('#listOfProjects').hide();
-  $('#aboutMeContent').fadeIn();
-}
+  function hamburgerClick() {
+    $('#nav img').fadeIn();
+    $('#hamburger').hide();
+  }
 
-$('#hamburger').on('click', hamburgerClick);
+  function aboutClick() {
+    $('#listOfProjects').hide();
+    $('#aboutMeContent').fadeIn();
+  }
 
-$('#aboutMeButton').on('click', aboutClick);
+  $('#hamburger').on('click', hamburgerClick);
 
-var rawHtml = $('#handlebars').html();
-var templateFunction  = Handlebars.compile(rawHtml);
+  $('#aboutMeButton').on('click', aboutClick);
 
-function Project (obj) {
-  this.name = obj.projName;
-  this.location = obj.projLink;
-}
+  var rawHtml = $('#handlebars').html();
+  var templateFunction  = Handlebars.compile(rawHtml);
 
-Project.prototype.toHtml = function() {
-  var htmlToAppend = templateFunction(this);
-  $('#listOfProjects').append(htmlToAppend);
-};
+  function Project (obj) {
+    this.name = obj.projName;
+    this.location = obj.projLink;
+  }
 
-allProjects.forEach(function(oneProject){
-  var proj = new Project(oneProject);
-  proj.toHtml();
-});
+  Project.prototype.toHtml = () => {
+    var htmlToAppend = templateFunction(this);
+    $('#listOfProjects').append(htmlToAppend);
+  };
+
+  allProjects.map(function(oneProject){
+    var proj = new Project(oneProject);
+    return proj.toHtml();
+  });
+  //I don't see a worthwhile use of the .reduce() here. My output is what I want.
+})();
