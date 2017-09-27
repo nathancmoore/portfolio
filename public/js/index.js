@@ -2,7 +2,6 @@
 
 var app = app || {};
 
-
 (function (module) {
 
   function hamburgerClick() {
