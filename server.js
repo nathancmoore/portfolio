@@ -3,10 +3,11 @@
 const EXPRESS = require('express');
 const requestProxy = require('express-request-proxy');
 const bodyParser = require('body-parser').urlencoded({extended: true});
+const pg = require('pg');
 const PORT = process.env.PORT || 3000;
-const app = EXPRESS();
 const conString = 'postgres://postgres:postgresPASSWORD123@localhost:5432/portfolio';
 const client = new pg.Client(conString);
+const app = EXPRESS();
 client.connect();
 client.on('error', err => console.error(err));
 
