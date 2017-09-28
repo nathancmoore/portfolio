@@ -8,11 +8,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-    <script id="handlebars" type="text/x-handlebars-template">
+    <script id="handlebars-projects" type="text/x-handlebars-template">
       <div>
         <hr>
-        <p id="projectName">{{ name }}</p>
+        <p>{{ name }}</p>
         <p><a id="projectLink" target="_blank" href="{{ location }}">Check it out!</a></p>
+        <hr>
+      </div>
+    </script>
+    <script id="handlebars-repos" type="text/x-handlebars-template">
+      <div>
+        <hr>
+        <p>{{ name }}</p>
+        <p>{{ updated_at }}</p>
+        <p>{{ pushed_at }}</p>
         <hr>
       </div>
     </script>
@@ -29,6 +38,9 @@
       <div id="listOfProjects">
 
       </div>
+      <div id="listOfRepos">
+
+      </div>
       <div id="aboutMeContent">
         <img src="http://www.placecage.com/gif/200/300" alt="This will be a picture of me later">
         <p>Nathan Moore is a software developer out of Seattle Washington</p>
@@ -39,6 +51,6 @@
   <script type="text/javascript" src="js/page.js"></script>
   <script type="text/javascript" src="js/repo.js"></script>
   <script type="text/javascript">
-      app.repos.requestRepos(console.log(app.repos.all));
+      app.repos.requestRepos(app.repos.renderRepos);
   </script>
 </html>
