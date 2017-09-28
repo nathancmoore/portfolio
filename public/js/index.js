@@ -27,7 +27,7 @@ var app = app || {};
   }
 
   Project.prototype.toHtml = () => {
-    var rawHtml = $('#handlebars').html();
+    var rawHtml = $('#handlebars-projects').html();
     var templateFunction = Handlebars.compile(rawHtml);
     var htmlToAppend = templateFunction(this);
     $('#listOfProjects').append(htmlToAppend);

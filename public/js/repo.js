@@ -12,5 +12,10 @@ var app = app || {};
       })
       .then(callback)
   }
+
+  repos.renderRepos = () => {
+    let compiled = Handlebars.compile($('#handlebars-repos').html());
+    $('#listOfRepos').append(repos.all.sort().map(compiled))
+  }
   module.repos = repos;
 })(app);
